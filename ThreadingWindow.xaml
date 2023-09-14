@@ -1,0 +1,24 @@
+﻿<Window x:Class="SPNP.ThreadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPNP_P12"
+        mc:Ignorable="d"
+        Title="ThreadingWindow" Height="450" Width="400">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+        <Label Content="Багатопоточність"/>
+        <Label Content="Проблема: висить 3 секунди, потім з'являється все"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Start" x:Name="StartButton1" Click="StartButton1_Click"/>
+            <ProgressBar Width="200" x:Name="ProgressBar1" Margin="15 0"/>
+            <Button Content="Stop" x:Name="StopButton1" Click="StopButton1_Click"/>
+        </StackPanel>
+        <Label Content="Проблема: висить 3 секунди, потім з'являється все" Margin="0 8 0 0"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Start" x:Name="StartButton2" Click=""/>
+            <ProgressBar Width="200" x:Name="ProgressBar2" Margin="15 0"/>
+            <Button Content="Stop" x:Name="StopButton2" Click=""/>
+        </StackPanel>
+    </StackPanel>
+</Window>
