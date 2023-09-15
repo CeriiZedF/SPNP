@@ -3,10 +3,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SPNP_P12"
+        xmlns:local="clr-namespace:SPNP"
         mc:Ignorable="d"
-        Title="ThreadingWindow" Height="450" Width="400">
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+        Title="ThreadingWindow" Height="601" Width="400">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,-16" RenderTransformOrigin="0.5,0.5">
+        <StackPanel.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform AngleX="0.122"/>
+                <RotateTransform/>
+                <TranslateTransform X="0.479"/>
+            </TransformGroup>
+        </StackPanel.RenderTransform>
         <Label Content="Багатопоточність"/>
         <Label Content="Проблема: висить 3 секунди, потім з'являється все"/>
         <StackPanel Orientation="Horizontal">
@@ -14,11 +22,42 @@
             <ProgressBar Width="200" x:Name="ProgressBar1" Margin="15 0"/>
             <Button Content="Stop" x:Name="StopButton1" Click="StopButton1_Click"/>
         </StackPanel>
-        <Label Content="Проблема: висить 3 секунди, потім з'являється все" Margin="0 8 0 0"/>
+        <Label Content="Проблема: System.InvalidOperationException: " Margin="0 8 0 0"/>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Start" x:Name="StartButton2" Click=""/>
+            <Button Content="Start" x:Name="StartButton2" Click="StartButton2_Click"/>
             <ProgressBar Width="200" x:Name="ProgressBar2" Margin="15 0"/>
-            <Button Content="Stop" x:Name="StopButton2" Click=""/>
+            <Button Content="Stop" x:Name="StopButton2" Click="StopButton2_Click"/>
+        </StackPanel>
+        <Label Content="Проблема: натиск двічі стартує два потоки, а стоп зупиняє всі" Margin="0 8 0 0" Height="29"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Start" x:Name="StartButton3" Click="StartButton3_Click"/>
+            <ProgressBar Width="200" x:Name="ProgressBar3" Margin="15 0"/>
+            <Button Content="Stop" x:Name="StopButton3" Click="StopButton3_Click"/>
+        </StackPanel>
+        <Label Content="Робоча кнопка" Margin="0 8 0 0" Height="27"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Start" x:Name="StartButton4" Click="StartButton4_Click"/>
+            <ProgressBar Width="200" x:Name="ProgressBar4" Margin="15 0"/>
+            <Button Content="Stop" x:Name="StopButton4" Click="StopButton4_Click"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Час роботи" Margin="0 8 0 0" Height="27"/>
+            <TextBox x:Name="WorkTimeTextBox" Margin="0 8 0 0" VerticalAlignment="Center" Text="3"></TextBox>
+            <Label Content="секунд(и)" Margin="0 8 0 0" Height="27"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Start" x:Name="StartButton5" Click="StartButton5_Click"/>
+            <ProgressBar Width="200" x:Name="ProgressBar5" Margin="15 0"/>
+            <Button Content="Stop" x:Name="StopButton5" Click="StopButton5_Click"/>
+        </StackPanel>
+        
+        <Label x:Name="Label6" Content="Робоча кнопка" Margin="0 8 0 0" Height="27"/>
+        <StackPanel Orientation="Vertical" Height="150">
+            <Button Content="Start" x:Name="StartButton6" Click="StartButton6_Click"/>
+            <ProgressBar Height="20" x:Name="ProgressBar6" Margin="15 0"/>
+            <ProgressBar Height="20" x:Name="ProgressBar6_1" Margin="15 0"/>
+            <ProgressBar Height="20" x:Name="ProgressBar6_2" Margin="15 0"/>
+            <Button Content="Stop" x:Name="StopButton6" Click="StopButton6_Click"/>
         </StackPanel>
     </StackPanel>
 </Window>
