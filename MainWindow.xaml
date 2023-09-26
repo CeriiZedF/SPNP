@@ -7,13 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="300">
     <StackPanel Orientation="Vertical">
-        <Label Content="Системне програмування" 
-               HorizontalAlignment="Center" 
-               FontSize="18"
-               FontWeight="Bold"></Label>
         <Button Content="Багапоточність"
                 x:Name="ThreadingButton"
                 Margin="20 7"
                 Click="ThreadingButton_Click"></Button>
+        <Button Content="Синхронізація"
+                x:Name="SynchroButton"
+                Margin="20 7"
+                Click="SynchroButton_Click"></Button>
+        <Button Content="Багатозадачність"
+                 x:Name="TaskWindow"
+                 Margin="20 7"
+                 Click="TaskWindow_Click"></Button>
+        <Button Content="Скасування задач"
+                 x:Name="Canceling"
+                 Margin="20 7"
+                 Click="Canceling_Click"></Button>
+        <Button Content="Процеси"
+         x:Name="ProcessButton"
+         Margin="20 7"
+         Click="ProcessButton_Click"></Button>
     </StackPanel>
 </Window>

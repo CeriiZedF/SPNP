@@ -1,0 +1,18 @@
+﻿<Window x:Class="SPNP.ProcessWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPNP"
+        mc:Ignorable="d"
+        Title="Диспетчер завдань" Height="450" Width="400">
+    <StackPanel Orientation="Vertical">
+        <Label Content="Процеси" HorizontalAlignment="Center"></Label>
+        <Button x:Name="ShowProcesses" Content="Show" Click="ShowProcesses_Click"></Button>
+        <ScrollViewer Height="300">
+            <TreeView x:Name="ProcTreeView" Width="340">
+            </TreeView>
+            <!--<TextBlock x:Name="ProcTextBlock"></TextBlock>-->
+        </ScrollViewer>
+    </StackPanel>
+</Window>

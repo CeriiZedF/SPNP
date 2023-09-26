@@ -1,0 +1,47 @@
+﻿<Window x:Class="SPNP.CancelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPNP"
+        mc:Ignorable="d"
+        Title="CancelWindow" Height="550" Width="400">
+    <StackPanel Orientation="Vertical">
+        <Label Content="Скасування задач - RunProgressCancallable" HorizontalAlignment="Center"></Label>
+        <StackPanel Margin="5" Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Margin="0 15">
+                <Button x:Name="StartBtn6" Content="Start" Click="StartBtn6_Click"/>
+                <StackPanel Orientation="Vertical" Margin="0 15">
+                    <ProgressBar Width="280" x:Name="ProgressBar10" Height="15" Margin="15 5"/>
+                    <ProgressBar Width="280" x:Name="ProgressBar11" Height="15" Margin="15 5"/>
+                    <ProgressBar Width="280" x:Name="ProgressBar12" Height="15" Margin="15 5"/>
+                </StackPanel>
+                <Button Content="Stop" x:Name="StopBtn6" Click="StopBtn6_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <Label Content="Скасування задач - RunProgress" HorizontalAlignment="Center"></Label>
+        <StackPanel Margin="5" Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Margin="0 15">
+                <Button x:Name="StartRP" Content="Start" Click="StartRP_Click"/>
+                <StackPanel Orientation="Vertical" Margin="0 15">
+                    <ProgressBar Width="280" x:Name="ProgressBarRP10" Height="15" Margin="15 5"/>
+                    <ProgressBar Width="280" x:Name="ProgressBarRP11" Height="15" Margin="15 5"/>
+                    <ProgressBar Width="280" x:Name="ProgressBarRP12" Height="15" Margin="15 5"/>
+                </StackPanel>
+                <Button Content="Stop" x:Name="StopRP" Click="StopRP_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <Label Content="Скасування задач - RunProgressWaitable" HorizontalAlignment="Center"></Label>
+        <StackPanel Margin="5" Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" Margin="0 15">
+                <Button x:Name="StartRPW" Content="Start" Click="StartRPW_Click"/>
+                <StackPanel Orientation="Vertical" Margin="0 15">
+                    <ProgressBar Width="280" x:Name="ProgressBarRPW10" Height="15" Margin="15 5"/>
+                    <ProgressBar Width="280" x:Name="ProgressBarRPW11" Height="15" Margin="15 5"/>
+                    <ProgressBar Width="280" x:Name="ProgressBarRPW12" Height="15" Margin="15 5"/>
+                </StackPanel>
+                <Button Content="Stop" x:Name="StopRPW" Click="StopRPW_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>
