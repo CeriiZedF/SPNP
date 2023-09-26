@@ -15,3 +15,4 @@ https://github.com/CeriiZedF/SPNP/blob/3d863119a99f00fb1f631849711566517d8efd45/
 
 3. "Диспетчер задач" -
 4. 1) додати відомостей про споживання процесорного часу та оперативної пам'яті, а також про загальну кількість потоків
+https://github.com/CeriiZedF/SPNP/blob/7bacc951c9c4b2d75f243f3a446c9138e8cc0187/ProcessWindow.xaml.cs#L59
