@@ -5,14 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SPNP"
         mc:Ignorable="d"
-        Title="Диспетчер завдань" Height="450" Width="400">
+        Title="Диспетчер завдань" Height="450" Width="400"
+        Loaded="Window_Loaded" Closed="Window_Closed">
     <StackPanel Orientation="Vertical">
-        <Label Content="Процеси" HorizontalAlignment="Center"></Label>
-        <Button x:Name="ShowProcesses" Content="Show" Click="ShowProcesses_Click"></Button>
-        <ScrollViewer Height="300">
-            <TreeView x:Name="ProcTreeView" Width="340">
-            </TreeView>
-            <!--<TextBlock x:Name="ProcTextBlock"></TextBlock>-->
-        </ScrollViewer>
+        <Label Content="Процеси" HorizontalAlignment="Center"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <Button x:Name="ShowProcesses" Content="Show"
+            Click="ShowProcesses_Click"/>
+                <ScrollViewer Height="300">
+                    <TreeView x:Name="ProcTreeView">
+
+                    </TreeView>
+                    <!--<TextBlock x:Name="ProcTextBlock"/>-->
+                </ScrollViewer>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Button x:Name="StartNotepad" 
+                    Content="Блокнот"
+                    Margin="7 4"
+                    Click="StartNotepad_Click"/>
+                <Button x:Name="StopNotepad" 
+                    Content="Закрити"
+                    Margin="7 4"
+                    Click="StopNotepad_Click"/>
+                <Button x:Name="StartEditNotepad" 
+                    Content="Редагування"
+                    Margin="7 4"
+                    Click="StartEditNotepad_Click"/>
+                <Button x:Name="StartBrowserNotepad" 
+                    Content="Браузер"
+                    Margin="7 4"
+                    Click="StartBrowserNotepad_Click"/>
+                <Button x:Name="StartCalculator" 
+                    Content="Запустити Калькулятор"
+                    Margin="7 4"
+                    Tag="calc.exe"
+                    Click="StartProcess"/>
+                <Button x:Name="CloseCalculator" 
+                    Content="Закрити Калькулятор"
+                    Margin="7 4"
+                    Tag="calc.exe"
+                    Click="CloseProcess"/>
+                <Button x:Name="StartTaskManager" 
+                    Content="Запустити диспетчер"
+                    Margin="7 4"
+                    Tag="Taskmgr.exe"
+                    Click="StartProcess"/>
+                <Button x:Name="CloseTaskManager" 
+                    Content="Закрити диспетчер"
+                    Margin="7 4"
+                    Tag="Taskmgr.exe"
+                    Click="CloseProcess"/>
+                <Button x:Name="StartCMD" 
+                    Content="Запустити CMD"
+                    Margin="7 4"
+                    Tag="cmd.exe"
+                    Click="StartProcess"/>
+                <Button x:Name="CloseCMD" 
+                    Content="Закрити CMD"
+                    Margin="7 4"
+                    Tag="cmd.exe"
+                    Click="CloseProcess"/>
+            </StackPanel>
+            
+        </Grid>
+
     </StackPanel>
 </Window>

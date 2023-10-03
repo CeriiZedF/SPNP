@@ -1,15 +1,14 @@
-﻿<Window x:Class="SPNP.SynchroWindow"
+﻿<Window x:Class="SPNP.CountDownWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SPNP"
         mc:Ignorable="d"
-        Title="SynchroWindow" Height="450" Width="300"
-        Closed="Window_Closed">
+        Title="CountDownWindow" Height="100" Width="300"
+        Loaded="Window_Loaded">
     <StackPanel Orientation="Vertical">
-        <Label HorizontalContentAlignment="Center" Content="Synchro"></Label>
-        <Button x:Name="StartButton" Content="Start" Click="StartButton_Click"></Button>
-        <TextBlock x:Name="LogTextBlock"></TextBlock>
+        <Label Content="Закрийте інше вікно або це автоматично закриється"></Label>
+        <ProgressBar x:Name="progressBar1" Height="25" Value="100"></ProgressBar>
     </StackPanel>
 </Window>

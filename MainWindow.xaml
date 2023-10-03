@@ -24,8 +24,12 @@
                  Margin="20 7"
                  Click="Canceling_Click"></Button>
         <Button Content="Процеси"
-         x:Name="ProcessButton"
-         Margin="20 7"
-         Click="ProcessButton_Click"></Button>
+                 x:Name="ProcessButton"
+                 Margin="20 7"
+                 Click="ProcessButton_Click"></Button>
+        <Button Content="Нитки. Продовження"
+                x:Name="ChainingButton"
+                Margin="20 7"
+                Click="ChainingButton_Click"></Button>
     </StackPanel>
 </Window>

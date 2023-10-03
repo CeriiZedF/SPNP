@@ -20,18 +20,42 @@ namespace SPNP
         {
             InitializeComponent();
         }
-
+        #region HomeWork
+        private static Mutex? mutexThreading;
+        private const String mutexThreadingName = "SPNP_MPW_MUTEX";
         private void ThreadingButton_Click(object sender, RoutedEventArgs e)
         {
+            try { mutexThreading = Mutex.OpenExisting(mutexThreadingName); }
+            catch { }
+
+            if (mutexThreading != null)
+            {
+                if (!mutexThreading.WaitOne(1))
+                {
+                    String message = "Запущено ішний екземпляр вікна";
+                    MessageBox.Show(message);
+                    return;
+                }
+            }
+            else
+            {
+                mutexThreading = new Mutex(true, mutexThreadingName);
+            }
             this.Hide();
-            new ThreadingWindow().ShowDialog();
+            try { new ThreadingWindow().ShowDialog(); } catch { }
             this.Show();
+            mutexThreading?.ReleaseMutex();
         }
+        #endregion
 
         private void SynchroButton_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            new SynchroWindow().ShowDialog();
+            try
+            {
+                new SynchroWindow().ShowDialog();
+            }
+           catch (Exception ex) { }
             this.Show();
         }
 
@@ -49,10 +73,36 @@ namespace SPNP
             this.Show();
         }
 
+        private static Mutex? mutex;
+        private const String mutexName = "SPNP_MPW_MUTEX";
         private void ProcessButton_Click(object sender, RoutedEventArgs e)
         {
+            try { mutex = Mutex.OpenExisting(mutexName); }
+            catch { }
+
+            if (mutex != null)
+            {
+                if (!mutex.WaitOne(1))
+                {
+                    String message = "Запущено ішний екземпляр вікна";
+                    MessageBox.Show(message);
+                    return;
+                }
+            }
+            else
+            {
+                mutex = new Mutex(true, mutexName);
+            }
             this.Hide();
-            new ProcessWindow().ShowDialog();
+            try { new ProcessWindow().ShowDialog(); } catch { }
+            this.Show();
+            mutex?.ReleaseMutex();
+        }
+
+        private void ChainingButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            new ChainingWindow().ShowDialog();
             this.Show();
         }
     }
