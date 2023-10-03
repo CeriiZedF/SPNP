@@ -35,3 +35,4 @@ https://github.com/CeriiZedF/SPNP/blob/e4407b4f3b465d3fe2f2a39d8386c018048c9e77/
 6.  Д.З. Реалізувати скасування "ниток", натисканням кнопки "Стоп"
 передбачити, що це може відбуватись на будь-якому етапі їх виконання
 Використовувати CancellationToken та їх джерело
+https://github.com/CeriiZedF/SPNP/blob/1f975c50713094d4e1bbc1cfd118e6a02b6bc02c/ChainingWindow.xaml.cs#L28
