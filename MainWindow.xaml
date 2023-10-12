@@ -31,5 +31,9 @@
                 x:Name="ChainingButton"
                 Margin="20 7"
                 Click="ChainingButton_Click"></Button>
+        <Button Content="Dll"
+                x:Name="DLLButton"
+                Margin="20 7"
+                Click="DLLButton_Click"></Button>
     </StackPanel>
 </Window>

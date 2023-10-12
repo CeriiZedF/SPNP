@@ -105,5 +105,12 @@ namespace SPNP
             new ChainingWindow().ShowDialog();
             this.Show();
         }
+
+        private void DLLButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            new DLLWindow().ShowDialog();
+            this.Show();
+        }
     }
 }

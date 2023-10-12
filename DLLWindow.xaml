@@ -1,0 +1,22 @@
+﻿<Window x:Class="SPNP.DLLWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SPNP"
+        mc:Ignorable="d"
+        Title="DLLWindow" Height="450" Width="300">
+    <StackPanel>
+        <Button Content="Alert" Margin="10 7" Height="25" x:Name="AlertButton" Click="AlertButton_Click"/>
+        <Button Content="Thread" Margin="10 7" Height="25" x:Name="ThreadButton" Click="ThreadButton_Click"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Sound" Margin="10 7" Height="25" x:Name="SoundButton" Click="SoundButton_Click"/>
+            <Button Content="Sound" Margin="10 7" Height="25" x:Name="SoundButton1" Click="SoundButton1_Click"/>
+            <Button Content="Sound" Margin="10 7" Height="25" x:Name="SoundButton2" Click="SoundButton2_Click"/>
+            <Button Content="Sound" Margin="10 7" Height="25" x:Name="SoundButton3" Click="SoundButton3_Click"/>
+            <Button Content="Sound" Margin="10 7" Height="25" x:Name="SoundButton4" Click="SoundButton4_Click"/>
+            
+        </StackPanel>
+        
+    </StackPanel>
+</Window>
