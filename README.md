@@ -38,3 +38,4 @@ https://github.com/CeriiZedF/SPNP/blob/e4407b4f3b465d3fe2f2a39d8386c018048c9e77/
 https://github.com/CeriiZedF/SPNP/blob/1f975c50713094d4e1bbc1cfd118e6a02b6bc02c/ChainingWindow.xaml.cs#L28
 
 7.Д.З. Завершити роботу з асинхронним відтворенням звуку. Додати до підсумкового проєкту засоби системного програмування
+https://github.com/CeriiZedF/SPNP/blob/2f9bafb23a317fe2efb9517657bc662715f94bfc/DLLWindow.xaml.cs#L107
